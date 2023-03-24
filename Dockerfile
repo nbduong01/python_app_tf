@@ -2,10 +2,9 @@ FROM python:3-alpine3.15
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-EXPOSE 3000
+RUN pip3 install -r requirements.txt
 
 COPY . .
-CMD python ./app.py
+CMD python3 ./app.py
 
 
